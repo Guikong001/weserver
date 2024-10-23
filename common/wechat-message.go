@@ -54,12 +54,12 @@ type Choice struct {
 
 // 调用AI API函数
 func CallAIAPI(userInput string) (string, error) {
-	url := "https://api.nicrik.com/v1/chat/completions"
-	apiKey := "API-key" // 请替换为你的 API 密钥
+	url := "https://fastgpt的地址/api/v1/chat/completions"
+	apiKey := "API-key" // 请替换为你的 API 密钥，
 
 	// 构造请求体
 	aiRequest := AIRequest{
-		Model: "gpt-4o-mini",
+		Model: "随便填", //如果不使用 fastgpt，这里改成 openai 或者 oneapi 的调用地址和密钥，填写需要调用的模型，也是可以的
 		Messages: []Message{
 			{
 				Role:    "system",
